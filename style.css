@@ -1,0 +1,146 @@
+:root {
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #444;
+  padding: 64px 32px 0;
+}
+
+#app {
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  border-radius: 16px;
+  justify-content: center;
+  gap: 16px;
+  max-width: 1000px;
+}
+#btn-home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+}
+
+#app-avatar, #app-custom {
+  background: #aaa;
+  height: 500px;
+  width: 50%;
+  border-radius: 8px;
+  position: relative;
+  padding: 16px;
+}
+
+/* Avatar styles */
+#btn-random {
+  position: absolute;
+}
+#avatar-character {
+  width: 80%;
+  aspect-ratio: 1/1;
+  max-height: 80%;
+  background-color: antiquewhite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#avatar-breed, #avatar-color {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.breed {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: aqua;
+}
+#avatar-color {
+  right: 16px;
+  gap: 8px;
+}
+.skin-color {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: burlywood;
+}
+#avatar-name {
+  position:absolute;
+  bottom: 16px;
+  left: 50%;
+  font-size: 24px;
+  width: 150px;
+  transform: translateX(-50%);
+}
+
+/* custom styles */
+#app-custom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#btns-custom {
+  height: 15%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.btn-custom {
+  background-color: cadetblue;
+  height: 100%;
+  width: 100px;
+  display: grid;
+  place-content: center;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+#custom-select {
+  width: 90%;
+  height: 80%;
+  background-color: cadetblue;
+  border-radius: 16px;
+}
+#custom-color {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#btn-done {
+  height: 15%;
+  margin: 0 auto;
+  padding: 8px 32px;
+  position: absolute;
+  bottom: 16px;
+}
+
+@media screen and (width < 900px) {
+  #app-avatar, #app-custom {
+    height: 400px;
+  }
+}
+@media screen and (width < 700px) {
+  #app {
+    flex-direction: column;
+  }
+  #app-avatar, #app-custom {
+    width: 100%;
+    height: 350px;
+  }
+}
